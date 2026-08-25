@@ -23,7 +23,7 @@ python -m venv .venv
 .venv\Scripts\Activate.ps1
 ```
 
-**macOS / Linux:**
+**And for macOS / Linux:**
 
 ```bash
 source .venv/bin/activate
@@ -68,7 +68,7 @@ api_endpoint_tests_with_examples.postman_collection.json
 Import this file into Postman after starting the FastAPI server to run the API requests locally.
 
 
-## (optional to visualize rows )sqlite:
+## (optional to visualize tables and data) sqlite:
 
 Database Inspection
 
