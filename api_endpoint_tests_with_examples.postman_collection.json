@@ -1,0 +1,160 @@
+{
+  "info": {
+    "_postman_id": "b62584a7-d1ba-461f-ad69-3ca8f19851e9",
+    "name": "auric_assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32676732"
+  },
+  "item": [
+    {
+      "name": "health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/health",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": {
+                      "status": "ok"
+                  }
+    },
+    {
+      "name": "rooms",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/rooms",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "rooms"
+          ]
+        }
+      },
+      "response": [
+                    {
+                        "id": 1,
+                        "name": "Aurora",
+                        "capacity": 8
+                    }
+                ]
+    },
+    {
+      "name": "create single booking",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"room_id\": 1,\r\n  \"user_id\": \"postman-single-user\",\r\n  \"start_time\": \"2026-10-05T09:00:00\",\r\n  \"end_time\": \"2026-10-05T10:00:00\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/bookings",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "bookings"
+          ]
+        }
+      },
+      "response": {
+                    "id": 13,
+                    "room_id": 1,
+                    "user_id": "postman-single-user",
+                    "start_time": "2026-10-05T09:00:00",
+                    "end_time": "2026-10-05T10:00:00",
+                    "recurring_group_id": null
+                  }
+    },
+    {
+      "name": "create recurring booking",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"room_id\": 1,\r\n  \"user_id\": \"postman-recurring-user\",\r\n  \"start_time\": \"2026-10-12T09:00:00\",\r\n  \"end_time\": \"2026-10-12T10:00:00\",\r\n  \"repeat_until\": \"2026-11-02\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/bookings/recurring",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "bookings",
+            "recurring"
+          ]
+        }
+      },
+      "response": {
+              "message": "Recurring booking created",
+              "recurring_group_id": "82e7cb56-61b2-4480-870e-f59124a2aeb0",
+              "created_count": 3,
+              "conflict_count": 1
+              }
+    },
+    {
+      "name": "delete booking (single & recurring)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/bookings/13",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "bookings",
+            "13"
+          ]
+        }
+      },
+      "response": {"message":"Recurring booking cancelled","booking_id":16,"recurring_group_id":"82e7cb56-61b2-4480-870e-f59124a2aeb0","deleted_count":3}
+    }
+  ]
+}
