@@ -66,3 +66,14 @@ api_endpoint_tests_with_examples.postman_collection.json
 ```
 
 Import this file into Postman after starting the FastAPI server to run the API requests locally.
+
+
+## (optional to visualize rows )sqlite:
+
+Database Inspection
+
+The project uses SQLite, and the database file is included as:
+
+roomloop.db
+
+A SQLite GUI such as DB Browser for SQLite can optionally be used to inspect the database tables and test data. It is not required to run the application or API. link - https://sqlitebrowser.org/dl/ 
