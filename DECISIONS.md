@@ -73,4 +73,4 @@ For recurring bookings, should cancellation remove all future occurrences or all
 
 * **Cancellation history:** Bookings are currently deleted rather than soft-deleted. For production, I would retain cancellation/audit records.
 
- for evaluator wanted quick setup so proceeded with sqlite... for production postgres GiST can be used...coz its extendible to more no of people provides room-level lock and doesnt block people who want to book another room plus range based indexing is there using GiST.
+ for evaluator wanted quick setup so proceeded with sqlite... for production postgres GiST can be used...coz its extendible to more no of people provides room-level lock and doesn't block people who want to book another room plus range based indexing is there using GiST.
