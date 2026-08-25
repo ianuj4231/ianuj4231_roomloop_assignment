@@ -5,8 +5,8 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ianuj4231/roomloop_assignment.git
-cd roomloop_assignment
+git clone https://github.com/ianuj4231/ianuj4231_roomloop_assignment.git
+cd ianuj4231_roomloop_assignment
 ```
 
 ### 2. Create a virtual environment
