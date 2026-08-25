@@ -67,7 +67,9 @@ api_endpoint_tests_with_examples.postman_collection.json
 
 Import this file into Postman after starting the FastAPI server to run the API requests locally.
 
-Have also attached a simulate_concurrency.py file that spawn 2 threads hit same create booking or create recurring endpoint at same time. this is when 2 people try to book same time range at same time.
+Have also included a simulate_concurrency.py file that spawn  2 threads/2 users  hit same create booking or create recurring endpoint at same time. this is when 2 people try to book same time range at same time. below screenshot terminal outputs are a  proof of  that concurrency scenario. 
+
+<img width="1920" height="1080" alt="Screenshot (545)" src="https://github.com/user-attachments/assets/f916ac40-b016-4dfe-9fce-31e793bb6314" />
 
 
 ## (optional to visualize tables and data) sqlite:
