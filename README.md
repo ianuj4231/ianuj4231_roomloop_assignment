@@ -78,6 +78,24 @@ Database Inspection
 
 The project uses SQLite, and the database file is included as:
 
-roomloop.db
+the file   `roomloop.db` currently contains a room. 
 
-A SQLite GUI such as DB Browser for SQLite can optionally be used to inspect the database tables and test data. It is not required to run the application or API. link - https://sqlitebrowser.org/dl/ 
+[
+
+{
+1	Aurora	8	Europe/Berlin
+}
+
+]
+
+
+can be visualized using : A SQLite GUI such as DB Browser for SQLite can optionally be used to inspect the database tables and test data. link - https://sqlitebrowser.org/dl/ 
+
+
+
+
+<img width="1334" height="675" alt="image" src="https://github.com/user-attachments/assets/5d88be44-ab1f-41d6-a02f-59909e16c0b3" />
+
+
+
+
