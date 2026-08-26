@@ -5,10 +5,7 @@
 __pycache__/
 *.py[cod]
 
-# SQLite database
-*.db
-*.sqlite
-*.sqlite3
+
 
 # Environment variables / secrets
 .env
